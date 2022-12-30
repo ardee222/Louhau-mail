@@ -13,7 +13,7 @@
     6:'六',
     7:'日'
     }
-  let current_index,customer_attachment,index1,index2,attachment_name;
+  let current_index,customer_attachment,index,attachment_name;
   $: current_index = 1;
   let opening_manu = false;
   
@@ -197,9 +197,8 @@
           <input name="attachment" type="file" class="absolute top-0 left-0 w-10 h-10 p-2 opacity-0 rounded-full"
           on:change={()=>{
             $: customer_attachment = document.getElementsByName('attachment')[0]
-            $: index1 = customer_attachment ? customer_attachment.value.lastIndexOf('\\') : 'a';
-            $: index2 = customer_attachment ? customer_attachment.value.lastIndexOf('.') : null;
-            $: attachment_name = customer_attachment ? customer_attachment.value.slice(index1+1,index2) : null;
+            $: index = customer_attachment ? customer_attachment.value.lastIndexOf('\\') : 'a';
+            $: attachment_name = customer_attachment ? customer_attachment.value.slice(index+1,) : null;
             console.log(attachment_name)
             }}>    
         </form>
