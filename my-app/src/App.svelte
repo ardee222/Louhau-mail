@@ -158,11 +158,19 @@
     </div>
   </div>
   <!--function list on phone-->
-  <div class="flex md:visible lg:invisible bg-red-100">
-    <div class="w-1/4 h-10 border border-white"></div>
-    <div class="w-1/4 h-10 border border-white"></div>
-    <div class="w-1/4 h-10 border border-white"></div>
-    <div class="w-1/4 h-10 border border-white"></div>
+  <div class="flex md:visible lg:invisible bg-green-100">
+    <div class="w-1/4 border border-white flex py-3 justify-center items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="orange" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+      </svg>
+    </div>
+    <div class="w-1/4 border border-white flex py-3 justify-center items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="orange" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+      </svg>
+    </div>
+    <div class="w-1/4 border border-white flex py-3 justify-center items-center"></div>
+    <div class="w-1/4 border border-white flex py-3 justify-center items-center"></div>
   </div>
 </main>
 
