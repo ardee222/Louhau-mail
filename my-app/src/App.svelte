@@ -22,7 +22,7 @@
 <main class="max-w-md w-screen h-screen">
   <div class="md:visible invisible absolute top-4 right-8">{year}年{month}月{date}日(星期{day_change[day]})</div>
   <!--function list-->
-  <div class="md:visible invisible  positive max-w-xs w-full max-h-screen h-screen bg-white absolute left-0 top-0 flex flex-col p-6"
+  <div class="md:visible duration-500 invisible positive max-w-xs w-full max-h-screen h-screen bg-white absolute left-0 top-0 flex flex-col p-6"
   class:w-28 = "{opening_manu === true}"
   >
     <div class="flex py-4">
