@@ -90,7 +90,7 @@
     </svg>
     <input class="bg-gray-500 p-2 focus:bg-white focus:border-b-4 border-blue-100" type="text" placeholder="搜尋郵件">
   </form>
-  <div class="md:translate-y-12 max-w-md w-screen max-h-screen h-full rounded-xl bg-white mb-10 pt-2">
+  <div class="md:translate-y-12 max-w-md w-screen max-h-[500px] h-full rounded-xl bg-white mb-10 pt-2">
     <div class="flex place-content-between mb-2 mx-4 sticky top-0">
       <div class="btn hover:bg-gray-200 duration p-2 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -111,7 +111,7 @@
       </div>
     </div>
     <hr class="sticky top-10">
-    <div class="flex flex-col max-h-screen justify-center items-center overflow-scroll">
+    <div class="flex flex-col h-96 justify-center items-center overflow-y-scroll">
       <div>暫時冇信息...</div>
       <div>暫時冇信息...</div>
       <div>暫時冇信息...</div>
