@@ -13,10 +13,10 @@
     6:'六',
     7:'日'
     }
-  let current_index;
+  let current_index,customer_attachment,index1,index2,attachment_name;
   $: current_index = 1;
   let opening_manu = false;
-
+  
 </script>
 
 <main class="max-w-md w-screen h-screen">
@@ -181,14 +181,28 @@
     <input type="text" placeholder="主旨">
     <div class="w-sm border-b"></div>
     <input type="text" placeholder="輸入正文" class="w-sm overflow-auto">
+    {#if attachment_name}
+    <div class="flex">
+      <div>己選擇附件:</div>
+      <div class="text-blue-200">{attachment_name}</div>
+    </div>
+    {/if}
     <div class="absolute bottom-2 flex items-center space-x-2">
       <button type="submit" class="text-sm bg-green-100 p-4 active:text-yellow-300">傳送</button>
       <div class="relative">
-        <div class="btn hover:bg-gray-300 p-2 rounded-full">
+        <form class="btn hover:bg-gray-300 p-2 rounded-full">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
-          </svg>    
-        </div>
+          </svg>
+          <input name="attachment" type="file" class="absolute top-0 left-0 w-10 h-10 p-2 opacity-0 rounded-full"
+          on:change={()=>{
+            $: customer_attachment = document.getElementsByName('attachment')[0]
+            $: index1 = customer_attachment ? customer_attachment.value.lastIndexOf('\\') : 'a';
+            $: index2 = customer_attachment ? customer_attachment.value.lastIndexOf('.') : null;
+            $: attachment_name = customer_attachment ? customer_attachment.value.slice(index1+1,index2) : null;
+            console.log(attachment_name)
+            }}>    
+        </form>
         <div class="hide">附件</div>
       </div>
       <div class="relative">
