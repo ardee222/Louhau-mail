@@ -15,7 +15,7 @@
     }
 </script>
 
-<main>
+<main class="bg-slate-200">
   <div class="md:visible invisible absolute top-4 right-8">{year}年{month}月{date}日(星期{day_change[day]})</div>
   <div class="md:visible invisible positive max-w-xs w-full max-h-screen h-screen bg-white absolute left-0 top-0 flex flex-col p-6">
     <div class="flex m-4">
