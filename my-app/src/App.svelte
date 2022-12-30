@@ -19,6 +19,7 @@
 
 <main class="max-w-md w-screen h-screen">
   <div class="md:visible invisible absolute top-4 right-8">{year}年{month}月{date}日(星期{day_change[day]})</div>
+  <!--function list-->
   <div class="md:visible invisible  positive max-w-xs w-full max-h-screen h-screen bg-white absolute left-0 top-0 flex flex-col p-6"
   class:w-28 = "{opening_manu === true}"
   >
@@ -111,7 +112,7 @@
       </div>
     </div>
     <hr class="sticky top-10">
-    <div class="flex flex-col h-96 justify-center items-center overflow-y-scroll">
+    <div class="flex flex-col h-96 my-2 justify-center items-center overflow-y-scroll">
       <div>暫時冇信息...</div>
       <div>暫時冇信息...</div>
       <div>暫時冇信息...</div>
@@ -151,6 +152,17 @@
       <div>暫時冇信息...</div>
       <div>暫時冇信息...</div>
     </div>
+    <div class="text-xs text-gray-400 mx-4">
+      <div>你已使用xxGB</div>
+      <div>剩返yyGB可用</div>
+    </div>
+  </div>
+  <!--function list on phone-->
+  <div class="flex md:visible lg:invisible bg-red-100">
+    <div class="w-1/4 h-10 border border-white"></div>
+    <div class="w-1/4 h-10 border border-white"></div>
+    <div class="w-1/4 h-10 border border-white"></div>
+    <div class="w-1/4 h-10 border border-white"></div>
   </div>
 </main>
 
