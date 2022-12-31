@@ -180,7 +180,7 @@
     <div class="w-sm border-b"></div>
     <input type="text" placeholder="主旨">
     <div class="w-sm border-b"></div>
-    <textarea  class="w-sm overflow-auto w-64 h-80 resize-none" name="正文" id="" cols="30" rows="10"></textarea>
+    <textarea  class="w-sm overflow-auto w-64 h-70 resize-none" name="正文" id="" cols="30" rows="10"></textarea>
     {#if attachment_name}
     <div class="flex">
       <div>己選擇附件:</div>
