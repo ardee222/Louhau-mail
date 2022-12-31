@@ -180,7 +180,7 @@
     <div class="w-sm border-b"></div>
     <input type="text" placeholder="主旨">
     <div class="w-sm border-b"></div>
-    <input type="text" placeholder="輸入正文" class="w-sm overflow-auto">
+    <textarea  class="w-sm overflow-auto w-64 h-80 resize-none" name="正文" id="" cols="30" rows="10"></textarea>
     {#if attachment_name}
     <div class="flex">
       <div>己選擇附件:</div>
@@ -214,9 +214,9 @@
       </div>
     </div>
   </div>
+  {/if}
 
   <!--function list on phone-->
-  {/if}
   <div class="flex md:visible lg:invisible bg-green-100">
     <div class="w-1/4 flex py-3 justify-center items-center"
     on:mouseup={()=> {current_index = 0}}
