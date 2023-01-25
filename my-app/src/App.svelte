@@ -176,7 +176,7 @@
   <!--writing mail-->
   {#if current_index === 0}
   <div class="relative max-w-md w-screen max-h-[600px] lg:max-h-[500px] h-full rounded-xl space-y-2 bg-white mb-2 p-4">
-    <form class="trun=cate flex focus-within:text-blue-200">
+    <form class="truncate flex focus-within:text-blue-200">
       <div class="shrink-0">收件人(編號):</div>
       <input type="text">
     </form>
