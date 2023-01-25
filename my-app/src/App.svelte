@@ -166,7 +166,7 @@
       <div>暫時冇信息...</div>
       <div>last暫時冇信息...</div>
     </div>
-    <div class="text-xs text-gray-400 mx-4">
+    <div class="text-xs text-gray-400 m-4 ">
       <div>你已使用xxGB</div>
       <div>剩返yyGB可用</div>
     </div>
