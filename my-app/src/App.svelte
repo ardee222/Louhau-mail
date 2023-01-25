@@ -6,7 +6,11 @@
   let date = today.getDate()
   let day = today.getDay();
   let teachers = data['teacher']
-
+  for(let i=0;i<teachers.length;i++){
+    if(teachers[i].subject === undefined){
+      teachers[i].subject = " "
+    } 
+  }
   const day_change = {
     1:'一',
     2:'二',
