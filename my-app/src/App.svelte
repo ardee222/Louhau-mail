@@ -175,15 +175,15 @@
 
   <!--writing mail-->
   {#if current_index === 0}
-  <div class="relative max-w-md w-screen max-h-[600px] lg:max-h-[500px] h-full rounded-xl space-y-2 bg-white mb-2 p-4">
-    <form class="truncate flex focus-within:text-blue-200">
+  <div class="truncate relative max-w-md w-screen max-h-[600px] lg:max-h-[500px] h-full rounded-xl space-y-2 bg-white mb-2 p-4">
+    <form class="flex focus-within:text-blue-200">
       <div class="shrink-0">收件人(編號):</div>
       <input type="text">
     </form>
     <div class="w-sm border-b"></div>
     <input type="text" placeholder="主旨">
     <div class="w-sm border-b"></div>
-    <textarea  placeholder="正文" class="w-96 overflow-auto h-70 resize-none" name="正文" id="" cols="30" rows="10"></textarea>
+    <textarea placeholder="正文" class="w-96 overflow-auto h-70 resize-none" name="正文" id="" cols="30" rows="10"></textarea>
     {#if attachment_name}
     <div class="flex">
       <div>己選擇附件:</div>
