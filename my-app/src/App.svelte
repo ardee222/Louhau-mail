@@ -1,9 +1,12 @@
 <script>
+  import data from "../src/data/data.json"
   let today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth()+1;
   let date = today.getDate()
   let day = today.getDay();
+  let teachers = data['teacher']
+
   const day_change = {
     1:'一',
     2:'二',
@@ -16,7 +19,8 @@
   let current_index,customer_attachment,index,attachment_name;
   $: current_index = 1;
   let opening_manu = false;
-  
+  let showing_data = false;
+
 </script>
 
 <main class="max-w-md w-screen h-screen">
@@ -207,7 +211,10 @@
         </form>
         <div class="hide">附件</div>
       </div>
-      <div class="relative">
+      <div class="relative" 
+      on:mouseup={()=>{
+        showing_data = !showing_data
+      }}>
         <div class="btn hover:bg-gray-300 p-2 rounded-full">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
@@ -218,6 +225,30 @@
     </div>
   </div>
   {/if}
+  <!--showing teachers and students' id-->
+  {#if showing_data}
+  <div class="inset-0 m-auto absolute z-10 bg-white w-96 h-96 rounded-lg p-4">
+    <div class="flex">
+      <div class="hover:bg-green-200 active:text-yellow-300 border rounded-lg p-2">教師</div>
+      <div class="hover:bg-green-200 active:text-yellow-300 border rounded-lg p-2">學生</div>
+    </div>
+    <div class="overflow-y-auto max-h-72 p-2 m-2">
+      {#each teachers as teacher(teacher.id) }
+        <div class="flex place-content-between p-x-2">
+          <div>{teacher.name}</div>
+          <div>{teacher.subject}</div>
+          <div>{teacher.id}</div>
+        </div>  
+      {/each}
+    </div>
+  </div>
+  <div class="flex inset-0 absolute z-0 bg-gray-500 opacity-60 w-screen h-screen"
+  on:mouseup={()=> {
+    showing_data = !showing_data;
+  }}>
+  </div>
+  {/if}
+
 
   <!--back to home page-->
   {#if current_index === 3}
